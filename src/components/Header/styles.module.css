@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 7.2rem;
+  padding: 2.4rem;
+  background-color: #fff;
+}
+
+.headerText {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.98rem;
+  color: #212429;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 2.9rem;
+  }
+
+  .headerText {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.64rem;
+  }
+}
