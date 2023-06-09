@@ -9,7 +9,7 @@
 
 .link {
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: "Nunito Sans";
   line-height: 2.4rem;
   text-decoration: underline;
@@ -21,6 +21,12 @@
   font-family: "Nunito Sans";
   line-height: 2.4rem;
   color: #636e7c;
+}
+
+@media (min-width: 375px) {
+  .link {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 1024px) {
