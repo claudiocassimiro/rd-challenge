@@ -44,6 +44,16 @@
   outline: none;
 }
 
+.errorMessage {
+  padding-top: 0.5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-family: "Nunito Sans";
+  line-height: 2.4rem;
+  color: #ee5050;
+  text-shadow: #000 0 0.1rem 0.1rem;
+}
+
 .containerAlertTexts {
   display: flex;
   flex-direction: column;
@@ -128,10 +138,6 @@
 
   .containerInput {
     max-width: unset;
-  }
-
-  .containerAlertTexts {
-    align-items: center;
   }
 
   .alertText,
