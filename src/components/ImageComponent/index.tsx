@@ -7,6 +7,7 @@ interface ImageComponentAttributes {
   height: number | undefined;
   className?: string;
   hasPriority?: boolean;
+  dataAos?: string;
 }
 
 export default function ImageComponent({
@@ -16,6 +17,7 @@ export default function ImageComponent({
   height,
   className,
   hasPriority = false,
+  dataAos,
 }: ImageComponentAttributes) {
   return (
     <Image
@@ -25,6 +27,7 @@ export default function ImageComponent({
       width={width}
       height={height}
       priority={hasPriority}
+      data-aos={dataAos}
     />
   );
 }

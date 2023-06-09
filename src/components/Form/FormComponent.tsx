@@ -41,10 +41,12 @@ export default function FormComponent({
         height={isDesktop ? 347 : 198}
         className={styles.imageStyle}
         hasPriority
+        dataAos="zoom-out"
       />
       <div className={styles.formContainer}>
         <FormProvider {...generateBusinessCard}>
           <form
+            data-aos="zoom-out"
             onSubmit={handleSubmit(handleFormValues)}
             className={styles.form}
           >
