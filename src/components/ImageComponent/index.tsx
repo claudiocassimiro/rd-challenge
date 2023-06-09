@@ -6,6 +6,7 @@ interface ImageComponentAttributes {
   width: number | undefined;
   height: number | undefined;
   className?: string;
+  hasPriority?: boolean;
 }
 
 const ImageComponent = ({
@@ -14,6 +15,7 @@ const ImageComponent = ({
   width,
   height,
   className,
+  hasPriority = false,
 }: ImageComponentAttributes) => {
   return (
     <Image
@@ -22,6 +24,7 @@ const ImageComponent = ({
       alt={alt}
       width={width}
       height={height}
+      priority={hasPriority}
     />
   );
 };
