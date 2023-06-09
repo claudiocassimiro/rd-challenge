@@ -50,38 +50,7 @@
   font-size: 1.4rem;
   font-family: "Nunito Sans";
   line-height: 2.4rem;
-  color: #ee5050;
-  text-shadow: #000 0 0.1rem 0.1rem;
-}
-
-.containerAlertTexts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.alertText {
-  padding: 0 0.5rem;
-}
-
-.alertText,
-.changePermissionText {
-  width: 30rem;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  font-family: "Nunito Sans";
-  color: #e1e4e8;
-  opacity: 0.8;
-}
-
-.linkStyle {
-  text-decoration: underline;
-}
-
-.changePermissionText {
-  margin-top: 2rem;
+  color: #d22367;
 }
 
 .button {
@@ -125,7 +94,6 @@
 @media (min-width: 768px) {
   .containerPhoneInputAndEmailInput {
     justify-content: center;
-    align-items: center;
   }
 
   .form {
@@ -138,11 +106,6 @@
 
   .containerInput {
     max-width: unset;
-  }
-
-  .alertText,
-  .changePermissionText {
-    width: 100%;
   }
 }
 
