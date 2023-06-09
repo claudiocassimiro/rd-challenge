@@ -24,7 +24,7 @@ export default function BusinessCard({
       {isDesktop ? (
         <ImageComponent
           src="/images/paint-man.webp"
-          alt="imagem de homem pintando uma tela"
+          alt="Imagem de homem pintando uma tela"
           width={isDesktop ? 471 : 269}
           height={isDesktop ? 347 : 198}
           className={styles.imageStyle}
