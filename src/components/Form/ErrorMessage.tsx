@@ -6,7 +6,7 @@ interface ErrorMessageProps {
   field: string;
 }
 
-function get(obj: Record<any, any>, path: string) {
+function getErros(obj: Record<any, any>, path: string) {
   const travel = (regexp: RegExp) =>
     String.prototype.split
       .call(path, regexp)
@@ -26,7 +26,7 @@ export function ErrorMessage({ field }: ErrorMessageProps) {
     formState: { errors },
   } = useFormContext();
 
-  const fieldError = get(errors, field);
+  const fieldError = getErros(errors, field);
 
   if (!fieldError) {
     return null;
