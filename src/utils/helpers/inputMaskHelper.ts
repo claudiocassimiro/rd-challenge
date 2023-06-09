@@ -1,11 +1,4 @@
 import { KeyboardEvent } from "react";
-import { UseFormSetValue } from "react-hook-form";
-import { generateBusinessCardData } from "../schemas/genereteBusinessCardSchema";
-
-interface handleInputMaskAttribute {
-  e: KeyboardEvent<HTMLInputElement>;
-  setValue: UseFormSetValue<generateBusinessCardData>;
-}
 
 export const phoneMask = (value: string) => {
   if (!value) return "";
@@ -20,10 +13,12 @@ export const phoneMask = (value: string) => {
   return value;
 };
 
-export const handleInputMask = ({ e, setValue }: handleInputMaskAttribute) => {
+export const handleInputMask = (e: KeyboardEvent<HTMLInputElement>) => {
   const { target } = e;
 
   if (target) {
-    setValue("phone", phoneMask((target as HTMLButtonElement).value));
+    return phoneMask((target as HTMLButtonElement).value);
   }
+
+  return "";
 };
