@@ -8,6 +8,7 @@ import ImageComponent from "../ImageComponent";
 import { useWindowSize } from "@/utils/helpers";
 import Button from "../Button";
 import Link from "next/link";
+import BackButton from "../BackButton";
 
 interface BusinessCardAttributes {
   cardData: GenerateBusinessCardData;
@@ -32,16 +33,7 @@ export default function BusinessCard({
         />
       ) : null}
       <div className={styles.container}>
-        <div className={styles.backButtonContainer}>
-          <button
-            type="button"
-            onClick={() => setCardData({ name: "", phone: "", email: "" })}
-            className={styles.button}
-          >
-            <MdKeyboardArrowLeft size={18} color="#fff" />
-            <span className={styles.buttonText}>Gerar outro cartão</span>
-          </button>
-        </div>
+        <BackButton text="Gerar outro cartão" handleClick={setCardData} />
 
         <div className={styles.businessCard}>
           <div className={styles.containerImage}>
