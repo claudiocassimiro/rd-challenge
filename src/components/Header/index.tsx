@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { useWindowSize } from "@/utils/helpers";
 import ImageComponent from "../ImageComponent";
 
-const Header = () => {
+export default function Header() {
   const { isDesktop } = useWindowSize();
   return (
     <header className={styles.header}>
@@ -18,6 +18,4 @@ const Header = () => {
       <p className={styles.headerText}>Gerador de Cartão de Visita</p>
     </header>
   );
-};
-
-export default Header;
+}
