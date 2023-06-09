@@ -1,5 +1,5 @@
 import styles from "./styles.module.css";
-import { generateBusinessCardData } from "../.././utils/schemas/genereteBusinessCardSchema";
+import { GenerateBusinessCardData } from "../.././utils/schemas/genereteBusinessCardSchema";
 
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -10,8 +10,8 @@ import Button from "../Button";
 import Link from "next/link";
 
 interface BusinessCardAttributes {
-  cardData: generateBusinessCardData;
-  setCardData: (data: generateBusinessCardData) => void;
+  cardData: GenerateBusinessCardData;
+  setCardData: (data: GenerateBusinessCardData) => void;
 }
 
 export default function BusinessCard({

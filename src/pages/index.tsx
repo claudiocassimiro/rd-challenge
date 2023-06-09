@@ -6,7 +6,7 @@ import TitleAndSubtitle from "@/components/TitleAndSubtitle";
 import Form from "@/components/Form/FormComponent";
 import Footer from "@/components/Footer";
 import { useState } from "react";
-import { generateBusinessCardData } from ".././utils/schemas/genereteBusinessCardSchema";
+import { GenerateBusinessCardData } from ".././utils/schemas/genereteBusinessCardSchema";
 import BusinessCard from "@/components/BusinessCard";
 
 const darkerGrotesque = Darker_Grotesque({
@@ -22,7 +22,7 @@ const cardDataInitialState = {
 
 export default function Home() {
   const [cardData, setCardData] = useState(
-    cardDataInitialState as generateBusinessCardData
+    cardDataInitialState as GenerateBusinessCardData
   );
   return (
     <>

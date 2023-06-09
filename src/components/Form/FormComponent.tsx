@@ -6,7 +6,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useForm, FormProvider } from "react-hook-form";
 import {
   generateBusinessCardSchema,
-  generateBusinessCardData,
+  GenerateBusinessCardData,
 } from "../.././utils/schemas/genereteBusinessCardSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { handleInputMask } from "../../utils/helpers/inputMaskHelper";
@@ -15,18 +15,18 @@ import AlertText from "../AlertTexts";
 import Button from "../Button";
 
 interface FormComponentAttributes {
-  setCardData: (data: generateBusinessCardData) => void;
+  setCardData: (data: GenerateBusinessCardData) => void;
 }
 
 export default function FormComponent({
   setCardData,
 }: FormComponentAttributes) {
-  const generateBusinessCard = useForm<generateBusinessCardData>({
+  const generateBusinessCard = useForm<GenerateBusinessCardData>({
     resolver: zodResolver(generateBusinessCardSchema),
   });
 
   const { handleSubmit, setValue, reset } = generateBusinessCard;
-  const handleFormValues = (data: generateBusinessCardData) => {
+  const handleFormValues = (data: GenerateBusinessCardData) => {
     setCardData(data);
     reset();
   };

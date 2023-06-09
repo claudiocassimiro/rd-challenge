@@ -22,6 +22,6 @@ export const generateBusinessCardSchema = z.object({
     .toLowerCase(),
 });
 
-export type generateBusinessCardData = z.infer<
+export type GenerateBusinessCardData = z.infer<
   typeof generateBusinessCardSchema
 >;
