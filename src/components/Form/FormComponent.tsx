@@ -1,7 +1,7 @@
 import { useWindowSize } from "@/utils/helpers";
 import ImageComponent from "../ImageComponent";
 import styles from "./styles.module.css";
-import { FaArrowRight } from "react-icons/fa";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 import { useForm, FormProvider } from "react-hook-form";
 import {
@@ -14,14 +14,21 @@ import { Form } from "./index";
 import AlertText from "../AlertTexts";
 import Button from "../Button";
 
-export default function FormComponent() {
+interface FormComponentAttributes {
+  setCardData: (data: generateBusinessCardData) => void;
+}
+
+export default function FormComponent({
+  setCardData,
+}: FormComponentAttributes) {
   const generateBusinessCard = useForm<generateBusinessCardData>({
     resolver: zodResolver(generateBusinessCardSchema),
   });
 
-  const { handleSubmit, setValue } = generateBusinessCard;
-  const handleFormValues = (data: any) => {
-    console.log(data);
+  const { handleSubmit, setValue, reset } = generateBusinessCard;
+  const handleFormValues = (data: generateBusinessCardData) => {
+    setCardData(data);
+    reset();
   };
 
   const { isDesktop } = useWindowSize();
@@ -89,7 +96,7 @@ export default function FormComponent() {
             <Button
               type="submit"
               text="GERAR CARTÃO GRÁTIS"
-              Icon={FaArrowRight}
+              Icon={HiOutlineArrowNarrowRight}
               tabIndex={4}
             />
           </form>
