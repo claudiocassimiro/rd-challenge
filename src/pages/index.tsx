@@ -3,7 +3,7 @@ import { Darker_Grotesque } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header";
 import TitleAndSubtitle from "@/components/TitleAndSubtitle";
-import Form from "@/components/Form";
+import Form from "@/components/Form/FormComponent";
 import Footer from "@/components/Footer";
 
 const darkerGrotesque = Darker_Grotesque({
