@@ -5,13 +5,24 @@ import { IconType } from "react-icons";
 interface ButtonAttributes extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
   Icon?: IconType;
+  auxClassName?: string;
 }
 
-export default function Button({ type, text, Icon }: ButtonAttributes) {
+export default function Button({
+  type,
+  text,
+  Icon,
+  disabled = false,
+  auxClassName,
+}: ButtonAttributes) {
   return (
-    <button type={type} className={styles.button}>
+    <button
+      disabled={disabled}
+      type={type}
+      className={`${styles.button} ${auxClassName}`}
+    >
       <span className={styles.buttonText}>{text}</span>
-      {Icon ? <Icon size={19} /> : null}
+      {Icon ? <Icon size={20} /> : null}
     </button>
   );
 }
