@@ -6,6 +6,7 @@
   height: 7.2rem;
   padding: 2.4rem;
   background-color: #fff;
+  position: fixed;
 }
 
 .headerText {
@@ -17,7 +18,7 @@
 
 @media (min-width: 1024px) {
   .header {
-    padding: 2.9rem;
+    padding: 2.4rem 8rem;
   }
 
   .headerText {

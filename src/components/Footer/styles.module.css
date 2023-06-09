@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #f1f3f5;
+  height: 5.6rem;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 1.3rem;
+  font-family: "Nunito Sans";
+  line-height: 2.4rem;
+  text-decoration: underline;
+  color: #636e7c;
+}
+
+.copyrightText {
+  font-size: 1.4rem;
+  font-family: "Nunito Sans";
+  line-height: 2.4rem;
+  color: #636e7c;
+}
+
+@media (min-width: 375px) {
+  .link {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    justify-content: center;
+  }
+
+  .copyrightText {
+    margin-left: 1.6rem;
+  }
+}
