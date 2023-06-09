@@ -5,7 +5,7 @@ export const generateBusinessCardSchema = z.object({
   name: z
     .string()
     .nonempty("O nome é obrigatório")
-    .min(2, "O nome deve ter no minimo 2 caracteres")
+    .min(2, "O nome deve ter no mínimo 2 caracteres")
     .transform((name) => {
       name
         .trim()
@@ -15,7 +15,10 @@ export const generateBusinessCardSchema = z.object({
         })
         .join(" ");
     }),
-  phone: z.string().nonempty().refine(validator.isMobilePhone),
+  phone: z
+    .string()
+    .nonempty("O número de telefone deve ter no mínimo 14 caracteres")
+    .refine(validator.isMobilePhone),
   email: z
     .string()
     .nonempty("O e-mail é obrigatório")
