@@ -9,14 +9,14 @@ interface ImageComponentAttributes {
   hasPriority?: boolean;
 }
 
-const ImageComponent = ({
+export default function ImageComponent({
   src,
   alt,
   width,
   height,
   className,
   hasPriority = false,
-}: ImageComponentAttributes) => {
+}: ImageComponentAttributes) {
   return (
     <Image
       className={className}
@@ -27,6 +27,4 @@ const ImageComponent = ({
       priority={hasPriority}
     />
   );
-};
-
-export default ImageComponent;
+}

@@ -3,15 +3,27 @@ import { Darker_Grotesque } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header";
 import TitleAndSubtitle from "@/components/TitleAndSubtitle";
-import Form from "@/components/Form";
+import Form from "@/components/Form/FormComponent";
 import Footer from "@/components/Footer";
+import { useState } from "react";
+import { GenerateBusinessCardData } from ".././utils/schemas/genereteBusinessCardSchema";
+import BusinessCard from "@/components/BusinessCard";
 
 const darkerGrotesque = Darker_Grotesque({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
+const cardDataInitialState = {
+  name: "",
+  phone: "",
+  email: "",
+};
+
 export default function Home() {
+  const [cardData, setCardData] = useState(
+    cardDataInitialState as GenerateBusinessCardData
+  );
   return (
     <>
       <Head>
@@ -25,13 +37,25 @@ export default function Home() {
       </Head>
       <div className={`${styles.container} ${darkerGrotesque.className}`}>
         <Header />
-        <main className={styles.main}>
-          <TitleAndSubtitle
-            title="Gerador de Cartão de Visitas"
-            subtitle="Crie grátis seu cartão de visita em passos rápidos! Você o insere no
+        <main
+          className={`${styles.main} ${
+            cardData.name !== "" ? styles.auxMain : undefined
+          }`}
+        >
+          {cardData.name === "" ? (
+            <>
+              <TitleAndSubtitle
+                title="Gerador de Cartão de Visitas"
+                subtitle="Crie grátis seu cartão de visita em passos rápidos! Você o insere no
         Instagram e demais canais digitais."
-          />
-          <Form />
+              />
+              <Form setCardData={setCardData} />
+            </>
+          ) : null}
+
+          {cardData.name !== "" ? (
+            <BusinessCard cardData={cardData} setCardData={setCardData} />
+          ) : null}
         </main>
         <Footer />
       </div>

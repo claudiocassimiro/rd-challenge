@@ -5,13 +5,14 @@ interface TitleAndSubtitleAttributes {
   subtitle: string;
 }
 
-const TitleAndSubtitle = ({ title, subtitle }: TitleAndSubtitleAttributes) => {
+export default function TitleAndSubtitle({
+  title,
+  subtitle,
+}: TitleAndSubtitleAttributes) {
   return (
     <div className={styles.containerTitleAndSubtitle}>
       <h1 className={styles.title}>{title}</h1>
       <p className={styles.subtitle}>{subtitle}</p>
     </div>
   );
-};
-
-export default TitleAndSubtitle;
+}
