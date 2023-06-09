@@ -6,6 +6,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <Link
         href="https://legal.rdstation.com/pt/privacy-policy/"
+        target="_blank"
         className={styles.link}
         title="política de privacidade"
       >
