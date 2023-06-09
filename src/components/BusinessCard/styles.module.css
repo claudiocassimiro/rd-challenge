@@ -7,27 +7,6 @@
   max-width: 51rem;
 }
 
-.backButtonContainer {
-  margin-bottom: 2.4rem;
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
-
-.buttonText {
-  margin-left: 0.5rem;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
-  font-family: "Nunito Sans";
-  color: #fff;
-}
-
 .businessCard {
   display: flex;
   justify-content: center;
