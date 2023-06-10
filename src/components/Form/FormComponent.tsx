@@ -54,7 +54,7 @@ export default function FormComponent({
                 name="name"
                 type="text"
                 placeholder="digite seu nome"
-                tabIndex={1}
+                tabIndex={0}
               />
 
               <Form.ErrorMessage field="name" />
@@ -71,7 +71,6 @@ export default function FormComponent({
                   placeholder="(00) 0 0000-0000"
                   onKeyUp={(e) => setValue("phone", handleInputMask(e))}
                   maxLength={16}
-                  tabIndex={2}
                 />
 
                 <Form.ErrorMessage field="phone" />
@@ -85,7 +84,6 @@ export default function FormComponent({
                   name="email"
                   type="email"
                   placeholder="nome@email.com"
-                  tabIndex={3}
                 />
 
                 <Form.ErrorMessage field="email" />
@@ -97,7 +95,6 @@ export default function FormComponent({
               type="submit"
               text="GERAR CARTÃO GRÁTIS"
               Icon={HiOutlineArrowNarrowRight}
-              tabIndex={4}
             />
           </form>
         </FormProvider>
