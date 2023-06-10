@@ -44,6 +44,7 @@ export default function FormComponent({
       <div className={styles.formContainer}>
         <FormProvider {...generateBusinessCard}>
           <form
+            noValidate
             data-aos="zoom-out"
             onSubmit={handleSubmit(handleFormValues)}
             className={styles.form}
