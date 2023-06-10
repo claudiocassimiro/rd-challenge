@@ -14,7 +14,9 @@ describe("FormComponent", () => {
 
       render(<Form setCardData={setCardData} />);
 
-      const button = screen.getByText("GERAR CARTÃO GRÁTIS");
+      const button = screen.getByRole("button", {
+        name: /GERAR CARTÃO GRÁTIS/i,
+      });
 
       await userEvent.click(button);
 
@@ -36,7 +38,9 @@ describe("FormComponent", () => {
 
       await userEvent.type(inputName, "C");
 
-      const button = screen.getByText("GERAR CARTÃO GRÁTIS");
+      const button = screen.getByRole("button", {
+        name: /GERAR CARTÃO GRÁTIS/i,
+      });
       await userEvent.click(button);
 
       expect(
@@ -53,7 +57,9 @@ describe("FormComponent", () => {
 
       await userEvent.type(inputPhone, "219");
 
-      const button = screen.getByText("GERAR CARTÃO GRÁTIS");
+      const button = screen.getByRole("button", {
+        name: /GERAR CARTÃO GRÁTIS/i,
+      });
       await userEvent.click(button);
 
       expect(screen.queryByText("Número inválido")).toBeInTheDocument();
@@ -68,7 +74,9 @@ describe("FormComponent", () => {
 
       await userEvent.type(inputEmail, "cla");
 
-      const button = screen.getByText("GERAR CARTÃO GRÁTIS");
+      const button = screen.getByRole("button", {
+        name: /GERAR CARTÃO GRÁTIS/i,
+      });
       await userEvent.click(button);
 
       expect(
@@ -89,7 +97,9 @@ describe("FormComponent", () => {
       await userEvent.type(inputPhone, "81993520671");
       await userEvent.type(inputEmail, "test9@gmail.com");
 
-      const button = screen.getByText("GERAR CARTÃO GRÁTIS");
+      const button = screen.getByRole("button", {
+        name: /GERAR CARTÃO GRÁTIS/i,
+      });
       await userEvent.click(button);
 
       expect(

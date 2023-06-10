@@ -35,7 +35,9 @@ describe("Home", () => {
       const inputPhone = screen.getByPlaceholderText("(00) 0 0000-0000");
       const inputEmail = screen.getByPlaceholderText("nome@email.com");
 
-      const button = screen.getByText("GERAR CARTÃO GRÁTIS");
+      const button = screen.getByRole("button", {
+        name: /GERAR CARTÃO GRÁTIS/i,
+      });
 
       expect(inputName).toBeInTheDocument();
       expect(inputPhone).toBeInTheDocument();
@@ -47,7 +49,9 @@ describe("Home", () => {
     it("if the submit button is clicked and the input fields is empty, should have some erros", async () => {
       render(<Home />);
 
-      const button = screen.getByText("GERAR CARTÃO GRÁTIS");
+      const button = screen.getByRole("button", {
+        name: /GERAR CARTÃO GRÁTIS/i,
+      });
 
       await userEvent.click(button);
 
@@ -71,7 +75,9 @@ describe("Home", () => {
       await userEvent.type(inputPhone, "219");
       await userEvent.type(inputEmail, "cla");
 
-      const button = screen.getByText("GERAR CARTÃO GRÁTIS");
+      const button = screen.getByRole("button", {
+        name: /GERAR CARTÃO GRÁTIS/i,
+      });
 
       await userEvent.click(button);
 
@@ -97,7 +103,9 @@ describe("Home", () => {
       await userEvent.type(inputPhone, "81993520671");
       await userEvent.type(inputEmail, "test@gmail.com");
 
-      const button = screen.getByText("GERAR CARTÃO GRÁTIS");
+      const button = screen.getByRole("button", {
+        name: /GERAR CARTÃO GRÁTIS/i,
+      });
 
       await userEvent.click(button);
 
