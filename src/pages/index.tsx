@@ -1,5 +1,9 @@
 import Head from "next/head";
-import { Darker_Grotesque } from "next/font/google";
+import {
+  Darker_Grotesque,
+  Nunito_Sans,
+  Red_Hat_Display,
+} from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header";
 import TitleAndSubtitle from "@/components/TitleAndSubtitle";
@@ -12,6 +16,18 @@ import BusinessCard from "@/components/BusinessCard";
 const darkerGrotesque = Darker_Grotesque({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--nunito-sans",
+});
+
+const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--red-hat-display",
 });
 
 const cardDataInitialState = {
@@ -35,7 +51,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={`${styles.container} ${darkerGrotesque.className}`}>
+      <div
+        className={`${styles.container} ${darkerGrotesque.className} ${nunitoSans.variable} ${redHatDisplay.variable}`}
+      >
         <Header />
         <main
           className={`${styles.main} ${
