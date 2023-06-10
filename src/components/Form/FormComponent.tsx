@@ -38,6 +38,7 @@ export default function FormComponent({
           alt="Imagem de homem pintando uma tela"
           hasPriority
           dataAos="zoom-out"
+          className={styles.image}
         />
       </div>
       <div className={styles.formContainer}>
