@@ -21,6 +21,7 @@ export default function ImageComponent({
 }: ImageComponentAttributes) {
   return width && height ? (
     <Image
+      data-testid="image-not-fill"
       className={className}
       src={src}
       alt={alt}
@@ -31,6 +32,7 @@ export default function ImageComponent({
     />
   ) : (
     <Image
+      data-testid="image-fill"
       className={className}
       src={src}
       alt={alt}
