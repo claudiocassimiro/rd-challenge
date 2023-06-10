@@ -1,4 +1,3 @@
-import { useWindowSize } from "@/utils/helpers";
 import ImageComponent from "../ImageComponent";
 import styles from "./styles.module.css";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
@@ -31,18 +30,16 @@ export default function FormComponent({
     reset();
   };
 
-  const { isDesktop } = useWindowSize();
   return (
     <div className={styles.container}>
-      <ImageComponent
-        src="/images/paint-man.webp"
-        alt="Imagem de homem pintando uma tela"
-        width={isDesktop ? 471 : 269}
-        height={isDesktop ? 347 : 198}
-        className={styles.imageStyle}
-        hasPriority
-        dataAos="zoom-out"
-      />
+      <div className={styles.containerImage}>
+        <ImageComponent
+          src="/images/paint-man.webp"
+          alt="Imagem de homem pintando uma tela"
+          hasPriority
+          dataAos="zoom-out"
+        />
+      </div>
       <div className={styles.formContainer}>
         <FormProvider {...generateBusinessCard}>
           <form
