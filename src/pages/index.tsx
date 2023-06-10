@@ -36,10 +36,15 @@ const cardDataInitialState = {
   email: "",
 };
 
+const title = "Gerador de Cartão de Visitas";
+const subtitle =
+  "Crie grátis seu cartão de visita em passos rápidos! Você o insere no Instagram e demais canais digitais.";
+
 export default function Home() {
   const [cardData, setCardData] = useState(
     cardDataInitialState as GenerateBusinessCardData
   );
+
   return (
     <>
       <Head>
@@ -62,11 +67,7 @@ export default function Home() {
         >
           {cardData.name === "" ? (
             <>
-              <TitleAndSubtitle
-                title="Gerador de Cartão de Visitas"
-                subtitle="Crie grátis seu cartão de visita em passos rápidos! Você o insere no
-        Instagram e demais canais digitais."
-              />
+              <TitleAndSubtitle title={title} subtitle={subtitle} />
               <Form setCardData={setCardData} />
             </>
           ) : null}
