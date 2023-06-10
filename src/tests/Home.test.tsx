@@ -24,7 +24,7 @@ describe("Home", () => {
       );
 
       expect(title).toBeInTheDocument();
-      expect(title.innerHTML).toBe("Gerador de Cartão de Visitas");
+      expect(title).toHaveTextContent("Gerador de Cartão de Visitas");
       expect(subtitle).toBeInTheDocument();
     });
 
