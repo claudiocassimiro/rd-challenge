@@ -1,5 +1,20 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Application Node version:
+
+- Node 18.16.0
+- npm 9.5.1
+
+## Install the application:
+
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
+```
+
 ## To run all tests you can use:
 
 ```bash
