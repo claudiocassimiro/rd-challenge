@@ -87,7 +87,7 @@ describe("FormComponent", () => {
 
       await userEvent.type(inputName, "Cláudio Cassimiro");
       await userEvent.type(inputPhone, "81993520671");
-      await userEvent.type(inputEmail, "claudioletras2019@gmail.com");
+      await userEvent.type(inputEmail, "test9@gmail.com");
 
       const button = screen.getByText("GERAR CARTÃO GRÁTIS");
       await userEvent.click(button);
