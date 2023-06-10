@@ -57,6 +57,7 @@ export default function BusinessCard({
           auxClassName={styles.auxButton}
         />
         <Link
+          title="Fazer um teste Grátis do RD Station Marketing"
           href="https://app.rdstation.com.br/signup"
           target="_blank"
           className={styles.containerText}
