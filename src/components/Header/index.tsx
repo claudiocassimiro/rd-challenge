@@ -5,7 +5,7 @@ import ImageComponent from "../ImageComponent";
 export default function Header() {
   const { isDesktop } = useWindowSize();
   return (
-    <header data-aos="zoom-out" className={styles.header}>
+    <header className={styles.header}>
       <ImageComponent
         dataAos="fade-right"
         src="/images/logo.webp"
