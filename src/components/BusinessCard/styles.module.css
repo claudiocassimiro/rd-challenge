@@ -50,7 +50,7 @@
 
 .cardInfoText {
   font-size: 1.4rem;
-  font-family: "Nunito Sans";
+  font-family: var(--nunito-sans);
   line-height: 1.6rem;
   color: #000;
 }
@@ -79,7 +79,7 @@
 
 .text {
   font-size: 1.4rem;
-  font-family: "Nunito Sans";
+  font-family: var(--nunito-sans);
   line-height: 2.4rem;
   letter-spacing: 0.02rem;
   color: #fff;

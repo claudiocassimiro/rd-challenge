@@ -21,7 +21,7 @@ export default function BusinessCard({
 }: BusinessCardAttributes) {
   const { isDesktop } = useWindowSize();
   return (
-    <div className={styles.wrapper}>
+    <div data-aos="fade-down" className={styles.wrapper}>
       {isDesktop ? (
         <ImageComponent
           src="/images/paint-man.webp"

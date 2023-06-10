@@ -44,7 +44,7 @@
 .buttonText {
   margin: 0 1.2rem;
   font-weight: 800;
-  font-family: "Nunito Sans";
+  font-family: var(--nunito-sans);
   font-size: 1.8rem;
   line-height: 2.4rem;
   letter-spacing: 0.02rem;

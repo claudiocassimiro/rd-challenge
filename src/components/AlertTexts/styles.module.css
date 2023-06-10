@@ -15,7 +15,7 @@
   width: 30rem;
   font-size: 1.2rem;
   line-height: 1.8rem;
-  font-family: "Nunito Sans";
+  font-family: var(--nunito-sans);
   color: #e1e4e8;
   opacity: 0.8;
 }

@@ -11,8 +11,12 @@ export default function TitleAndSubtitle({
 }: TitleAndSubtitleAttributes) {
   return (
     <div className={styles.containerTitleAndSubtitle}>
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.subtitle}>{subtitle}</p>
+      <h1 data-aos="zoom-out" className={styles.title}>
+        {title}
+      </h1>
+      <p data-aos="zoom-out" className={styles.subtitle}>
+        {subtitle}
+      </p>
     </div>
   );
 }
