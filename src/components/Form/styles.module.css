@@ -53,7 +53,7 @@
   font-size: 1.4rem;
   font-family: var(--nunito-sans);
   line-height: 2.4rem;
-  color: #d22367;
+  color: #000;
 }
 
 @media (min-width: 768px) {
